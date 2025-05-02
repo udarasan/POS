@@ -5,8 +5,12 @@ const db={
 function saveCustomer(customer) {
     db.customers.push(customer);
 }
-function updateCustomer() {
-
+function updateCustomer(updateCustomer) {
+    const index=db.customers.findIndex(
+        (c)=>c.id===updateCustomer.id);
+    if (index !== -1){
+        db.customers[index]=updateCustomer;
+    }
 }
 function getCustomers() {
     return db.customers;
