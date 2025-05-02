@@ -19,5 +19,5 @@ function getCustomerById(id) {
     return db.customers.find((c)=>c.id===id);
 }
 function removeCustomer(id) {
-
+    db.customers=db.customers.filter((c)=>c.id !== id)
 }

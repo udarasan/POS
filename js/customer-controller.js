@@ -46,5 +46,6 @@ function editCustomer(id) {
     }
 }
 function deleteCustomer(id) {
-    deleteCustomer(id);
+    removeCustomer(id);
+    loadCustomers();
 }
